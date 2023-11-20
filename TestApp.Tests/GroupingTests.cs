@@ -24,13 +24,13 @@ public class GroupingTests
     [Test]
     public void Test_GroupNumbers_WithEvenAndOddNumbers_ShouldReturnGroupedString()
     {
-        List<int> input = new() { 2, 3, 4};
+        List<int> input = new() { 1, 2, 3, 4};
 
         // Act
         string result = Grouping.GroupNumbers(input);
 
         // Assert
-        Assert.That(result, Is.EqualTo("Even numbers: 2, 4\r\nOdd numbers: 3"));
+        Assert.That(result, Is.EqualTo($"Odd numbers: 1, 3{Environment.NewLine}Even numbers: 2, 4"));
 
     }
 
@@ -50,26 +50,26 @@ public class GroupingTests
     [Test]
     public void Test_GroupNumbers_WithOnlyOddNumbers_ShouldReturnGroupedString()
     {
-        List<int> input = new (){3, 5};
+        List<int> input = new (){1, 3, 5};
 
         // Act
         string result = Grouping.GroupNumbers(input);
 
         // Assert
-        Assert.That(result, Is.EqualTo("Odd numbers: 3, 5"));
+        Assert.That(result, Is.EqualTo("Odd numbers: 1, 3, 5"));
 
     }
 
     [Test]
     public void Test_GroupNumbers_WithNegativeNumbers_ShouldReturnGroupedString()
     {
-        List<int> input = new() { -2, -3, -4 };
+        List<int> input = new() {-1, -2, -3, -4 };
 
         // Act
         string result = Grouping.GroupNumbers(input);
 
         // Assert
-        Assert.That(result, Is.EqualTo("Even numbers: -2, -4\r\nOdd numbers: -3"));
+        Assert.That(result, Is.EqualTo($"Odd numbers: -1, -3{Environment.NewLine}Even numbers: -2, -4"));
 
     }
 }

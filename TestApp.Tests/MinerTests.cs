@@ -35,11 +35,11 @@ public class MinerTests
     public void Test_Mine_WithDifferentResources_ShouldReturnResourceCounts()
     {
         // Arrange
-        string[] input = new string[] { "gold 8", "silver 30", "gold 10" };
+        string[] input = new string[] { "gold 8", "silver 30", "copper 10" };
         // Act
         string result = Miner.Mine(input);
 
         // Assert
-        Assert.That(result, Is.EqualTo($"gold -> 18{Environment.NewLine}silver -> 30"));
+        Assert.That(result, Is.EqualTo($"gold -> 8{Environment.NewLine}silver -> 30{Environment.NewLine}copper -> 10"));
     }
 }

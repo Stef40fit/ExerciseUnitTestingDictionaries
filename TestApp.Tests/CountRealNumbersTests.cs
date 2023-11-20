@@ -44,7 +44,7 @@ public class CountRealNumbersTests
         string result = CountRealNumbers.Count(input);
 
         // Assert
-        Assert.That(result, Is.EqualTo("2 -> 1\r\n3 -> 1\r\n4 -> 1"));
+        Assert.That(result, Is.EqualTo($"2 -> 1{Environment.NewLine}3 -> 1{Environment.NewLine}4 -> 1"));
     }
 
     [Test]
@@ -57,7 +57,7 @@ public class CountRealNumbersTests
         string result = CountRealNumbers.Count(input);
 
         // Assert
-        Assert.That(result, Is.EqualTo("-4 -> 1\r\n-3 -> 1\r\n-2 -> 1"));
+        Assert.That(result, Is.EqualTo($"-4 -> 1{Environment.NewLine}-3 -> 1{Environment.NewLine}-2 -> 1"));
     }
 
     [Test]

@@ -30,7 +30,7 @@ public class PlantsTests
         string result = Plants.GetFastestGrowing(plants);
 
         // Assert
-        Assert.That(result, Is.EqualTo("Plants with 4 letters:\r\nrose"));
+        Assert.That(result, Is.EqualTo($"Plants with 4 letters:{Environment.NewLine}rose"));
     }
 
     [Test]
@@ -44,7 +44,7 @@ public class PlantsTests
         string result = Plants.GetFastestGrowing(plants);
 
         // Assert
-        Assert.That(result, Is.EqualTo("Plants with 3 letters:\r\ntea\r\naaa\r\nPlants with 4 letters:\r\nrose\r\nbbbb"));
+        Assert.That(result, Is.EqualTo($"Plants with 3 letters:{Environment.NewLine}tea{Environment.NewLine}aaa{Environment.NewLine}Plants with 4 letters:{Environment.NewLine}rose{Environment.NewLine}bbbb"));
     }
 
     [Test]
@@ -57,6 +57,6 @@ public class PlantsTests
         string result = Plants.GetFastestGrowing(plants);
 
         // Assert
-        Assert.That(result, Is.EqualTo("Plants with 3 letters:\r\nTea\r\nPlants with 4 letters:\r\nRose"));
+        Assert.That(result, Is.EqualTo($"Plants with 3 letters:{Environment.NewLine}Tea{Environment.NewLine}Plants with 4 letters:{Environment.NewLine}Rose"));
     }
 }
